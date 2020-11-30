@@ -1,0 +1,7 @@
+/* If any file grows too cluttered or disorganized, it’s time to expand our structure. 
+Consider adding a folder for your components for example, and breaking it up into 
+individual files such as _button.scss & _carousel.scss. */
+
+@import 'base';
+@import 'components';
+@import 'layout';

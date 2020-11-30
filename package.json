@@ -1,0 +1,14 @@
+{
+  "name": "cybersec",
+  "version": "1.0.0",
+  "description": "CyberSec landing page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "TomekF",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
