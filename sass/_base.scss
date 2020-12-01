@@ -24,7 +24,7 @@ $color-orange-dark: #b47500;
 
 
 /* font sizes */
-$font-lg: 4.8rem;
+$font-lg: 4rem;
 $font-bg: 3.2rem;
 $font-md: 2.2rem;
 $font-sm: 1.6rem;
@@ -56,56 +56,5 @@ $font-xs: 1.2rem;
   &--xs {
     font-family: 'Varela Round', sans-serif;
     font-size: $font-xs;
-  }
-}
-
-
-
-/* buttons styles */
-.btn,
-.btn--blue {
-  font-family: 'Varela Round', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4.5rem;
-  padding: 1.1rem 1.1rem;
-  font-size: $font-sm;
-  font-weight: bolder;
-  text-transform: capitalize;
-  border: none;
-  color: $color-gray-light;
-  transition: all 0.5s ease;
-  background-color: $color-orange;
-
-  &--blue {
-    background-color: $color-blue;
-  }
-
-  &:hover {
-    cursor: pointer;
-    opacity: 0.7;
-  }
-}
-
-
-/* links styles */
-.link,
-.link--orange {
-  font-family: 'Varela Round', sans-serif;
-  font-size: $font-sm;
-  color: $color-gray-light;
-  text-decoration: none;
-
-  &--orange {
-    color: $color-orange-dark;
-    font-size: $font-xs;
-    text-decoration: underline;
-  }
-
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8;
-    transition: all 0.5s ease;
   }
 }

@@ -1,1 +1,50 @@
 // Components: anything reusable such as buttons, navbars, cards etc.
+
+/* buttons styles */
+.btn,
+.btn--blue {
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  padding: 1.1rem 3.3rem;
+  font-size: $font-sm;
+  font-weight: bolder;
+  text-transform: capitalize;
+  border: none;
+  color: $color-gray-light;
+  transition: all 0.5s ease;
+  background-color: $color-orange;
+
+  &--blue {
+    background-color: $color-blue;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+
+/* links styles */
+.link,
+.link--orange {
+  font-family: 'Varela Round', sans-serif;
+  font-size: $font-sm;
+  color: $color-gray-light;
+  text-decoration: none;
+
+  &--orange {
+    color: $color-orange-dark;
+    font-size: $font-xs;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+  }
+}

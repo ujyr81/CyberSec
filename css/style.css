@@ -17,7 +17,7 @@ individual files such as _button.scss & _carousel.scss. */
 /* font types for text clesses, text classes sizes */
 .text--lg {
   font-family: 'Montserrat', sans-serif;
-  font-size: 4.8rem; }
+  font-size: 4rem; }
 
 .text--bg {
   font-family: 'Montserrat', sans-serif;
@@ -43,7 +43,7 @@ individual files such as _button.scss & _carousel.scss. */
   align-items: center;
   justify-content: center;
   height: 4.5rem;
-  padding: 1.1rem 1.1rem;
+  padding: 1.1rem 3.3rem;
   font-size: 1.6rem;
   font-weight: bolder;
   text-transform: capitalize;
@@ -77,6 +77,7 @@ individual files such as _button.scss & _carousel.scss. */
     opacity: 0.8;
     transition: all 0.5s ease; }
 
+/* Section Haeder */
 .header {
   background: url(../img/bg-header.jpg) center no-repeat;
   background-size: cover;
@@ -90,11 +91,113 @@ individual files such as _button.scss & _carousel.scss. */
   align-items: stretch; }
   .header__logo {
     grid-column: 2/3;
-    grid-row: 1/2; }
+    grid-row: 1/2;
+    margin-top: 1rem; }
   .header__menu {
     grid-column: 4/9;
-    grid-row: 1/2; }
+    grid-row: 1/2;
+    justify-self: center;
+    margin-top: 3rem; }
   .header__list {
     display: flex;
     flex-direction: row;
     list-style-type: none; }
+  .header__link {
+    padding: 0 2rem; }
+  .header__btn {
+    grid-column: 10/12;
+    grid-row: 1/2;
+    justify-self: center;
+    margin-top: 1rem; }
+  .header__heading {
+    grid-column: 2/8;
+    grid-row: 3/6;
+    align-self: center; }
+  .header__title {
+    margin-bottom: 1rem;
+    letter-spacing: 0.15rem; }
+  .header__para {
+    width: 80%;
+    margin-bottom: 2rem;
+    font-weight: lighter; }
+
+/* Section Dangers */
+.dangers {
+  background: linear-gradient(45deg, rgba(228, 225, 221, 0.95) 5%, rgba(228, 225, 221, 0.9) 100%), url(../img/bg-dangers.jpeg) center no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #4a4a4a;
+  padding: 0 8.34rem; }
+  .dangers__descr, .dangers__diagram {
+    width: 50%;
+    height: 50%; }
+  .dangers__diagram {
+    background-color: #9898ff; }
+  .dangers__descr {
+    display: flex;
+    flex-direction: column; }
+    .dangers__descr--descr-1 {
+      padding-right: 3rem; }
+    .dangers__descr--descr-2 {
+      padding-left: 3rem; }
+  .dangers__title {
+    margin: 10% 0 1rem 0;
+    letter-spacing: 0.1rem; }
+  .dangers__para {
+    margin-bottom: 1rem; }
+
+/* Section Offer */
+.offer {
+  background: linear-gradient(45deg, rgba(74, 74, 74, 0.95) 5%, rgba(74, 74, 74, 0.9) 100%), url(../img/bg-offer.jpeg) center no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: #e4e1dd;
+  padding: 0 8.34rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .offer__area {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .offer__title {
+    margin-bottom: 2rem;
+    letter-spacing: 0.25rem; }
+  .offer__card {
+    height: 60vh;
+    width: 21vw;
+    background-color: #e4e1dd;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem; }
+  .offer__pic img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem; }
+  .offer__item {
+    list-style: none;
+    padding-left: 1.5rem;
+    background-image: url("../img/checkmark.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    color: #4a4a4a; }
+  .offer__price {
+    margin-bottom: 1rem; }
+  .offer__btn {
+    margin-top: 2rem; }
+  .offer__link {
+    margin-top: 1rem;
+    color: #e4e1dd; }

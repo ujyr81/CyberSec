@@ -1,5 +1,6 @@
 // Layout: contains all the CSS that handles the layout, such as the container and any grid systems.
 
+/* Section Haeder */
 .header {
   background: url(../img/bg-header.jpg) center no-repeat;
   background-size: cover;
@@ -17,11 +18,14 @@
   &__logo {
     grid-column: 2/3;
     grid-row: 1/2;
+    margin-top: 1rem;
   }
 
   &__menu {
     grid-column: 4/9;
     grid-row: 1/2;
+    justify-self: center;
+    margin-top: 3rem;
   }
 
   &__list {
@@ -29,4 +33,150 @@
     flex-direction: row;
     list-style-type: none;
   }
+
+  &__link {
+    padding: 0 2rem;
+  }
+
+  &__btn {
+    grid-column: 10/12;
+    grid-row: 1/2;
+    justify-self: center;
+    margin-top: 1rem;
+  }
+
+  &__heading {
+    grid-column: 2/8;
+    grid-row: 3/6;
+    align-self: center;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    letter-spacing: 0.15rem;
+  }
+
+  &__para {
+    width: 80%;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+  }
 }
+
+
+/* Section Dangers */
+.dangers {
+  background: linear-gradient(45deg, rgba($color-gray-light, 0.95) 5%, rgba($color-gray-light, 0.9) 100%), url(../img/bg-dangers.jpeg) center no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: $color-gray;
+  padding: 0 8.34rem;
+
+  &__descr, &__diagram {
+    width: 50%;
+    height: 50%;
+  }
+
+  &__diagram {
+    background-color: rgb(152, 152, 255);
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+
+    &--descr-1 {
+      padding-right: 3rem;
+    }
+
+    &--descr-2 {
+      padding-left: 3rem;
+    }
+  }
+
+  &__title {
+    margin: 10% 0 1rem 0;
+    letter-spacing: 0.1rem;
+  }
+
+  &__para {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* Section Offer */
+.offer {
+  background: linear-gradient(45deg, rgba($color-gray, 0.95) 5%, rgba($color-gray, 0.9) 100%), url(../img/bg-offer.jpeg) center no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: $color-gray-light;
+  padding: 0 8.34rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &__area {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    letter-spacing: 0.25rem;
+  }
+
+  &__card {
+    height: 60vh;
+    width: 21vw;
+    background-color: $color-gray-light;
+    color: $color-gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem;
+  }
+
+  &__pic img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+
+  &__item {
+    list-style: none;
+    padding-left: 1.5rem;
+    background-image: url('../img/checkmark.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem;
+    color: $color-gray;
+  }
+
+  &__price {
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    margin-top: 2rem;
+  }
+
+  &__link {
+    margin-top: 1rem;
+    color: $color-gray-light;
+  }
+}
+
+
