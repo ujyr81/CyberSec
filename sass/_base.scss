@@ -1,1 +1,111 @@
 // Base: contained within this file are all your resets, variables, mixins, and any utility classes.
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;1,200;1,500&family=Varela+Round&display=swap');
+
+/* resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+
+/* colors */
+$color-primary: #1b3467;
+$color-blue: #3e29ef;
+$color-blue-dark: #211B7A;
+$color-gray-light: #e4e1dd;
+$color-gray: #4a4a4a;
+$color-orange: #ffaf1c;
+$color-orange-dark: #b47500;
+
+
+/* font sizes */
+$font-lg: 4.8rem;
+$font-bg: 3.2rem;
+$font-md: 2.2rem;
+$font-sm: 1.6rem;
+$font-xs: 1.2rem;
+
+
+/* font types for text clesses, text classes sizes */
+.text {
+  &--lg {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $font-lg;
+  }
+  
+  &--bg {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $font-bg;
+  }
+  
+  &--md {
+    font-family: 'Varela Round', sans-serif;
+    font-size: $font-md;
+  }
+  
+  &--sm {
+    font-family: 'Varela Round', sans-serif;
+    font-size: $font-sm;
+  }
+  
+  &--xs {
+    font-family: 'Varela Round', sans-serif;
+    font-size: $font-xs;
+  }
+}
+
+
+
+/* buttons styles */
+.btn,
+.btn--blue {
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  padding: 1.1rem 1.1rem;
+  font-size: $font-sm;
+  font-weight: bolder;
+  text-transform: capitalize;
+  border: none;
+  color: $color-gray-light;
+  transition: all 0.5s ease;
+  background-color: $color-orange;
+
+  &--blue {
+    background-color: $color-blue;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+
+/* links styles */
+.link,
+.link--orange {
+  font-family: 'Varela Round', sans-serif;
+  font-size: $font-sm;
+  color: $color-gray-light;
+  text-decoration: none;
+
+  &--orange {
+    color: $color-orange-dark;
+    font-size: $font-xs;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+  }
+}

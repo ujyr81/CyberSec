@@ -1,1 +1,32 @@
 // Layout: contains all the CSS that handles the layout, such as the container and any grid systems.
+
+.header {
+  background: url(../img/bg-header.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  
+  align-items: stretch;
+
+  &__logo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  &__menu {
+    grid-column: 4/9;
+    grid-row: 1/2;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+}
