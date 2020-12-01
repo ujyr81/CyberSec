@@ -92,7 +92,7 @@ individual files such as _button.scss & _carousel.scss. */
   .header__logo {
     grid-column: 2/3;
     grid-row: 1/2;
-    margin-top: 1rem; }
+    margin-top: 2rem; }
   .header__menu {
     grid-column: 4/9;
     grid-row: 1/2;
@@ -117,7 +117,7 @@ individual files such as _button.scss & _carousel.scss. */
     margin-bottom: 1rem;
     letter-spacing: 0.15rem; }
   .header__para {
-    width: 80%;
+    width: 70%;
     margin-bottom: 2rem;
     font-weight: lighter; }
 
@@ -170,7 +170,8 @@ individual files such as _button.scss & _carousel.scss. */
     justify-content: center; }
   .offer__title {
     margin-bottom: 2rem;
-    letter-spacing: 0.25rem; }
+    letter-spacing: 0.2rem;
+    font-weight: 500; }
   .offer__card {
     height: 60vh;
     width: 21vw;
@@ -193,11 +194,52 @@ individual files such as _button.scss & _carousel.scss. */
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 1rem;
-    color: #4a4a4a; }
+    color: #4a4a4a;
+    line-height: 150%; }
   .offer__price {
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    font-weight: 300; }
   .offer__btn {
     margin-top: 2rem; }
   .offer__link {
     margin-top: 1rem;
     color: #e4e1dd; }
+
+/* Section Testimonials */
+.testimonials {
+  background: linear-gradient(45deg, rgba(228, 225, 221, 0.95) 5%, rgba(228, 225, 221, 0.9) 100%), url(../img/bg-testimonials.jpeg) center no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: #4a4a4a;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  /* cards */ }
+  .testimonials__cards {
+    grid-column: 2/8;
+    grid-row: 2/6;
+    background-color: #e4e1dd; }
+  .testimonials__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%; }
+    .testimonials__card--card-2, .testimonials__card--card-3 {
+      display: none; }
+  .testimonials__quote {
+    text-align: center;
+    font-style: italic; }
+  .testimonials__text {
+    grid-column: 9/12;
+    grid-row: 2/6;
+    background-color: #e4e1dd;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .testimonials__title {
+    font-weight: 500; }

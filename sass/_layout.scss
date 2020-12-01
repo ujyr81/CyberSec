@@ -18,7 +18,7 @@
   &__logo {
     grid-column: 2/3;
     grid-row: 1/2;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
   &__menu {
@@ -57,7 +57,7 @@
   }
 
   &__para {
-    width: 80%;
+    width: 70%;
     margin-bottom: 2rem;
     font-weight: lighter;
   }
@@ -133,7 +133,8 @@
 
   &__title {
     margin-bottom: 2rem;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
   }
 
   &__card {
@@ -163,10 +164,12 @@
     background-position: left center;
     background-size: 1rem;
     color: $color-gray;
+    line-height: 150%;
   }
 
   &__price {
     margin-bottom: 1rem;
+    font-weight: 300;
   }
 
   &__btn {
@@ -176,6 +179,84 @@
   &__link {
     margin-top: 1rem;
     color: $color-gray-light;
+  }
+}
+
+
+/* Section Testimonials */
+.testimonials {
+  background: linear-gradient(45deg, rgba($color-gray-light, 0.95) 5%, rgba($color-gray-light, 0.9) 100%), url(../img/bg-testimonials.jpeg) center no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: $color-gray;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  &__cards {
+    grid-column: 2/8;
+    grid-row: 2/6;
+
+    background-color: $color-gray-light;
+  }
+
+  /* cards */
+  &__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+
+
+    &--card-2, &--card-3 {
+      display: none;
+    }
+  }
+
+  &__mark {
+    
+  }
+
+  &__quote {
+    text-align: center;
+    font-style: italic;
+  }
+
+  &__pic {
+
+  }
+
+  &__name {
+
+  }
+
+  &__profession {
+
+  }
+
+  &__text {
+    grid-column: 9/12;
+    grid-row: 2/6;
+
+    background-color: $color-gray-light;
+    color: $color-gray;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__para {
+
   }
 }
 
