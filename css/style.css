@@ -79,7 +79,7 @@ individual files such as _button.scss & _carousel.scss. */
 
 /* Section Haeder */
 .header {
-  background: url(../img/bg-header.jpg) center no-repeat;
+  background: url(../img/bg-header-2.jpeg) center no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -124,7 +124,7 @@ individual files such as _button.scss & _carousel.scss. */
 /* Section Dangers */
 .dangers {
   background: linear-gradient(45deg, rgba(228, 225, 221, 0.95) 5%, rgba(228, 225, 221, 0.9) 100%), url(../img/bg-dangers.jpeg) center no-repeat;
-  height: 100vh;
+  height: 80rem;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -152,8 +152,8 @@ individual files such as _button.scss & _carousel.scss. */
 
 /* Section Offer */
 .offer {
-  background: linear-gradient(45deg, rgba(74, 74, 74, 0.95) 5%, rgba(74, 74, 74, 0.9) 100%), url(../img/bg-offer.jpeg) center no-repeat;
-  height: 100vh;
+  background: linear-gradient(45deg, rgba(27, 52, 103, 0.95) 5%, rgba(27, 52, 103, 0.9) 100%), url(../img/bg-offer.jpeg) center no-repeat;
+  height: 80rem;
   width: 100%;
   overflow: hidden;
   color: #e4e1dd;
@@ -171,10 +171,10 @@ individual files such as _button.scss & _carousel.scss. */
   .offer__title {
     margin-bottom: 2rem;
     letter-spacing: 0.2rem;
-    font-weight: 500; }
+    font-weight: 400; }
   .offer__card {
-    height: 60vh;
-    width: 21vw;
+    height: 36rem;
+    width: 22rem;
     background-color: #e4e1dd;
     color: #4a4a4a;
     display: flex;
@@ -195,7 +195,7 @@ individual files such as _button.scss & _carousel.scss. */
     background-position: left center;
     background-size: 1rem;
     color: #4a4a4a;
-    line-height: 150%; }
+    line-height: 160%; }
   .offer__price {
     margin-bottom: 1rem;
     font-weight: 300; }
@@ -208,14 +208,23 @@ individual files such as _button.scss & _carousel.scss. */
 /* Section Testimonials */
 .testimonials {
   background: linear-gradient(45deg, rgba(228, 225, 221, 0.95) 5%, rgba(228, 225, 221, 0.9) 100%), url(../img/bg-testimonials.jpeg) center no-repeat;
-  height: 100vh;
+  height: 80rem;
   width: 100%;
   overflow: hidden;
   color: #4a4a4a;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  /* cards */ }
+  /* cards */
+  /*   &__mark {
+    
+  } */
+  /*   &__profession {
+
+  } */
+  /*   &__para {
+    
+  } */ }
   .testimonials__cards {
     grid-column: 2/8;
     grid-row: 2/6;
@@ -231,15 +240,76 @@ individual files such as _button.scss & _carousel.scss. */
       display: none; }
   .testimonials__quote {
     text-align: center;
-    font-style: italic; }
+    font-style: italic;
+    margin-bottom: 2rem; }
+  .testimonials__pic {
+    background-color: black;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%; }
+  .testimonials__name {
+    margin-top: 2rem; }
   .testimonials__text {
     grid-column: 9/12;
     grid-row: 2/6;
-    background-color: #e4e1dd;
     color: #4a4a4a;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center; }
   .testimonials__title {
-    font-weight: 500; }
+    font-weight: 500;
+    margin-top: 1rem;
+    align-self: flex-start; }
+  .testimonials__num {
+    color: #b47500; }
+    .testimonials__num--num-1 {
+      font-weight: 500; }
+
+/* Footer */
+.footer {
+  background-color: #1b3467;
+  height: 40rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding-top: 5rem; }
+  .footer__logo {
+    grid-column: 2/4;
+    grid-row: 1/2; }
+    .footer__logo a {
+      font-size: 2.4rem; }
+  .footer__menu {
+    grid-column: 4/9;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .footer__group {
+    list-style-type: none; }
+  .footer__item--group-title a {
+    color: #ffaf1c;
+    margin-bottom: 1rem; }
+  .footer__contact {
+    grid-column: 10/12;
+    grid-row: 1/2; }
+    .footer__contact > * {
+      color: #e4e1dd; }
+  .footer__title {
+    color: #ffaf1c;
+    margin-bottom: .5rem; }
+  .footer__list {
+    list-style-type: none; }
+  .footer__item-con {
+    padding: .25rem 0; }
+  .footer__last {
+    grid-column: 2/12;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #e4e1dd; }
+  .footer__copy {
+    color: #e4e1dd;
+    align-self: center; }
