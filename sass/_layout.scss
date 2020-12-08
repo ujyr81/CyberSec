@@ -41,8 +41,17 @@
   &__btn {
     grid-column: 10/12;
     grid-row: 1/2;
-    justify-self: center;
+    justify-self: end;
     margin-top: 1rem;
+
+    & i {
+      font-size: 2rem;
+      transform: translateX(-50%);
+    }
+
+    &--menu {
+      display: none;
+    }
   }
 
   &__heading {
@@ -119,9 +128,48 @@
   padding: 0 8.34rem;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__heading {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__para {
+    width: 50%;
+    text-align: center;
+    margin-top: -1rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 100%;
+      bottom: 0;
+      left: 15%;
+      border-bottom: 1px solid $color-orange;
+    }
+  }
+
+  
+
+  &__offers {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+  }
 
   &__area {
     height: 100%;
@@ -133,7 +181,7 @@
 
   &__title {
     margin-bottom: 2rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     font-weight: 400;
   }
 
@@ -174,6 +222,12 @@
 
   &__btn {
     margin-top: 2rem;
+
+    & i {
+      transform: translateX(-50%);
+      font-size: 2.2rem;
+      color: $color-gray-light;
+    }
   }
 
   &__link {
@@ -217,9 +271,14 @@
     }
   }
 
-/*   &__mark {
-    
-  } */
+  &__mark {
+    margin-bottom: 2rem;
+
+    & i {
+      font-size: 8rem;
+      color: lighten($color-gray, 40%);
+    }
+  }
 
   &__quote {
     text-align: center;
@@ -305,11 +364,13 @@
 
   &__group {
     list-style-type: none;
+    text-align: center;
   }
 
   &__item {
+    letter-spacing: 0.1rem;
 
-    &--group-title a{
+    &--group-title {
       color: $color-orange;
       margin-bottom: 1rem;
     }
@@ -335,6 +396,14 @@
 
   &__item-con{
     padding: .25rem 0;
+
+    & i {
+      padding-right: 1rem;
+    }
+
+    &--cd {
+      margin-left: 2.2rem;
+    }
   }
 
   &__last {
@@ -346,12 +415,34 @@
     border-top: 1px solid $color-gray-light;
   }
 
+  &__social {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-soc {
+    padding-right: 1rem;
+
+    & i {
+      font-size: $font-lg;
+      color: $color-gray-light;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      transition: all 0.5s ease;
+    }
+  }
+
   &__copy {
     color: $color-gray-light;
     align-self: center;
+    margin-right: 1rem;
   }
-
-
 }
 
 
