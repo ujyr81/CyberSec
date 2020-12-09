@@ -7,5 +7,5 @@ btnMenu.addEventListener('click', () => {
   navMenu.classList.toggle('header__menu--mobile');
   navList.classList.toggle('header__list--mobile');
   btnChat.classList.toggle('header__btn--mobile');
+  navList.appendChild(btnChat)
 });
-

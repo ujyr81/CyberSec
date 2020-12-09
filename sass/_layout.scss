@@ -348,6 +348,8 @@
     grid-column: 2/4;
     grid-row: 1/2;
 
+    justify-self: center;
+
     & a {
       font-size: 2.4rem;
     }
@@ -380,6 +382,8 @@
     grid-column: 10/12;
     grid-row: 1/2;
 
+    justify-self: center;
+
     & > * {
       color: $color-gray-light;
     }
@@ -392,18 +396,47 @@
 
   &__list {
     list-style-type: none;
+    padding: 0;
   }
 
   &__item-con{
     padding: .25rem 0;
+  }
 
-    & i {
-      padding-right: 1rem;
-    }
+  &__item-con:first-child::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f879";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem;
+  }
 
-    &--cd {
-      margin-left: 2.2rem;
-    }
+  &__item-con:nth-child(2)::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f879";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem;
+  }
+
+  &__item-con:nth-child(3)::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f0e0";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem;
+  }
+
+  &__item-con:nth-child(4)::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f015";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem;
   }
 
   &__last {

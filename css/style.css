@@ -340,7 +340,8 @@ individual files such as _button.scss & _carousel.scss. */
   padding-top: 5rem; }
   .footer__logo {
     grid-column: 2/4;
-    grid-row: 1/2; }
+    grid-row: 1/2;
+    justify-self: center; }
     .footer__logo a {
       font-size: 2.4rem; }
   .footer__menu {
@@ -359,20 +360,46 @@ individual files such as _button.scss & _carousel.scss. */
       margin-bottom: 1rem; }
   .footer__contact {
     grid-column: 10/12;
-    grid-row: 1/2; }
+    grid-row: 1/2;
+    justify-self: center; }
     .footer__contact > * {
       color: #e4e1dd; }
   .footer__title {
     color: #ffaf1c;
     margin-bottom: .5rem; }
   .footer__list {
-    list-style-type: none; }
+    list-style-type: none;
+    padding: 0; }
   .footer__item-con {
     padding: .25rem 0; }
-    .footer__item-con i {
-      padding-right: 1rem; }
-    .footer__item-con--cd {
-      margin-left: 2.2rem; }
+  .footer__item-con:first-child::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f879";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem; }
+  .footer__item-con:nth-child(2)::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f879";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem; }
+  .footer__item-con:nth-child(3)::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f0e0";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem; }
+  .footer__item-con:nth-child(4)::before {
+    font-family: Font Awesome\ 5 Free;
+    content: "\f015";
+    font-weight: 900;
+    display: inline-block;
+    margin-left: -2rem;
+    width: 2rem; }
   .footer__last {
     grid-column: 2/12;
     grid-row: 3/4;
@@ -526,11 +553,15 @@ individual files such as _button.scss & _carousel.scss. */
   .testimonials {
     height: 100%;
     margin: 0;
-    padding: 1rem 0;
+    padding: 3rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    .testimonials__text {
+      order: 1; }
+    .testimonials__cards {
+      order: 2; }
     .testimonials__mark {
       font-size: 2.2rem;
       margin-top: 2rem; }
@@ -549,7 +580,7 @@ individual files such as _button.scss & _carousel.scss. */
   .footer {
     height: 100%;
     margin: 0;
-    padding: 1rem 0;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -561,7 +592,7 @@ individual files such as _button.scss & _carousel.scss. */
     .footer__title {
       font-size: 1.6rem;
       text-align: center;
-      margin-top: 1rem; }
+      margin-top: 2rem; }
     .footer__list {
       margin-bottom: 2rem; }
     .footer__item-con {
