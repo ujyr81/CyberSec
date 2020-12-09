@@ -10,9 +10,31 @@ btnMenu.addEventListener('click', () => {
   btnChat.classList.toggle('header__btn--mobile');
   
   if(!navList.contains(btnChat)) {
-    navList.appendChild(btnChat)
+    navList.appendChild(btnChat);
   } else {
-    navList.removeChild(btnChat)
-    header.appendChild(btnChat)
+    navList.removeChild(btnChat);
+    header.appendChild(btnChat);
   }
 });
+
+
+const cards = []
+cards[0] = document.querySelector('.testimonials__card--card-1');
+cards[1] = document.querySelector('.testimonials__card--card-2');
+cards[2] = document.querySelector('.testimonials__card--card-3');
+
+let i = 0;
+function changeImg() {
+  cards[i].style.display = "none";
+  if (i < cards.length-1) {
+    i++;
+    cards[i].style.display = "flex";
+  } else {
+    i = 0;
+    cards[i].style.display = "flex";
+  }
+
+  setTimeout("changeImg()", 3000);         
+}
+window.onload = changeImg;                   
+

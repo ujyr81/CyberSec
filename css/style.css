@@ -294,7 +294,11 @@ individual files such as _button.scss & _carousel.scss. */
     justify-content: center;
     align-items: center;
     padding: 0 10%; }
-    .testimonials__card--card-2, .testimonials__card--card-3 {
+    .testimonials__card--card-1 {
+      display: none; }
+    .testimonials__card--card-2 {
+      display: none; }
+    .testimonials__card--card-3 {
       display: none; }
   .testimonials__mark {
     margin-bottom: 2rem; }
