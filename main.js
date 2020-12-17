@@ -24,7 +24,7 @@ cards[1] = document.querySelector('.testimonials__card--card-2');
 cards[2] = document.querySelector('.testimonials__card--card-3');
 
 let i = 0;
-function changeImg() {
+function changeCard() {
   cards[i].style.display = "none";
   if (i < cards.length-1) {
     i++;
@@ -33,8 +33,7 @@ function changeImg() {
     i = 0;
     cards[i].style.display = "flex";
   }
-
-  setTimeout("changeImg()", 3000);         
+  setTimeout("changeCard()", 5000);         
 }
-window.onload = changeImg;                   
+window.onload = changeCard;                   
 

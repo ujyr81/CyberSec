@@ -14,13 +14,21 @@
 
 
 /* colors */
-$color-primary: #1b3467;
+/* $color-primary: #1b3467;
 $color-blue: #3e29ef;
 $color-blue-dark: #211B7A;
 $color-gray-light: #e4e1dd;
 $color-gray: #4a4a4a;
 $color-orange: #ffaf1c;
-$color-orange-dark: #b47500;
+$color-orange-dark: #b47500; */
+
+$color-primary: #1b3467;
+$color-primary-light: #3e29ef;
+$color-primary-dark: #211B7A;
+$color-secondary: #e4e1dd;
+$color-secondary-dark: #4a4a4a;
+$color-tertiary: #ffaf1c;
+$color-tertiary-dark: #b47500;
 
 
 /* font sizes */
@@ -30,57 +38,25 @@ $font-md: 2.2rem;
 $font-sm: 1.6rem;
 $font-xs: 1.2rem;
 
+$font-title: 'Montserrat', sans-serif;
+$font-para: 'Varela Round', sans-serif;
 
-/* font types for text clesses, text classes sizes */
 .text {
-  &--lg {
-    font-family: 'Montserrat', sans-serif;
-    font-size: $font-lg;
-  }
-  
-  &--bg {
-    font-family: 'Montserrat', sans-serif;
+  &--title {
+    font-family: $font-title;
     font-size: $font-bg;
   }
-  
-  &--md {
-    font-family: 'Varela Round', sans-serif;
-    font-size: $font-md;
-  }
-  
-  &--sm {
-    font-family: 'Varela Round', sans-serif;
+
+  &--para {
+    font-family: $font-para;
     font-size: $font-sm;
   }
-  
-  &--xs {
-    font-family: 'Varela Round', sans-serif;
+
+  &--item {
+    font-family: $font-para;
     font-size: $font-xs;
   }
 }
 
 
-// Media Query Mixins
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
 
-@mixin mediaMd {
-  @media screen and (min-width: 501px) and (max-width: 768px) {
-    @content;
-  }
-}
-
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
-    @content;
-  }
-}
-
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
-    @content;
-  }
-}
