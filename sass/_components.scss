@@ -68,6 +68,26 @@
     text-decoration: underline;
   }
 
+  &--menu {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__bars {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 2px;
+    background-color: $color-secondary;
+  }
+
   &:hover {
     cursor: pointer;
     opacity: 0.8;
