@@ -205,7 +205,7 @@
       
       justify-self: center;
       align-self: center;
-      margin: 0 0 1rem 0;
+      margin: 0;
     }
 
     &__menu, &__btn--chat {
@@ -344,6 +344,7 @@
       padding: 0;
 
       & i {
+        font-size: $font-lg * 1.2;
         margin: 0 1rem 1rem;
       }
     }
@@ -431,4 +432,44 @@
       padding: 0;
     }
   }
+}
+
+
+/////////////////////////////////////////////////////////////////////
+/* For Galaxy Fold horizontal ) */
+/////////////////////////////////////////////////////////////////////
+@media screen and (max-height: 280px){
+  .header {
+    &__logo {
+      grid-row: 1/2;
+      margin: 1rem 0 0 6rem;
+    }
+
+    &__heading {
+      grid-row: 4/6;
+      grid-column: 1/9;
+    }
+
+    &__para {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////
+/* For Galaxy Fold vertical ) */
+/////////////////////////////////////////////////////////////////////
+@media screen and (max-width: 280px) {
+  .header {
+    &__logo {
+      grid-column: 1/4;
+      margin-left: 2rem;
+    }
+    &__para {width: 100%;}
+  }
+
+  .dangers__descr {padding: 2rem 1.3rem;}
+  .offer__para {width: 90%;}
+  .testimonials {height: 80rem;}
+  .footer__copy {margin-right: 0;}
 }
