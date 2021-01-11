@@ -53,50 +53,27 @@ offers[1] = document.querySelector('.offer__area--area-adv');
 offers[2] = document.querySelector('.offer__area--area-pro');
 
 
-const offersArea = document.querySelector('.offer__offers');
-const mediaQuery = window.matchMedia('(max-width: 600px)');
+const btnLeft = document.querySelector('.offer__arrow--left');
+const btnRight = document.querySelector('.offer__arrow--right');
 
-if (mediaQuery.matches) {
-  const arrowLeft = document.createElement('BUTTON');
-  const arrowRight = document.createElement('BUTTON');
+// offers[card_index].style.display = 'none'
+// offers[card_index+1].style.display = 'flex'
 
-  [arrowLeft, arrowRight].forEach(el => {
-    el.style.height = '10rem'
-    el.style.width = '10%'
-  });
+let card_index = 0;
 
-  offersArea.prepend(arrowLeft)
-  offersArea.append(arrowRight)
-
-  let card_index = 0;
+btnRight.addEventListener('click', () => {
+  card_index += 1
   console.log(card_index)
-  arrowRight.addEventListener('click', () => {
-    
-    if(card_index < offers.length-1) {
-      offers[card_index].style.display = 'none'
-      offers[card_index+1].style.display = 'flex'
-      arrowRight.style.opacity = '100%'
-      card_index++;
-      console.log(card_index)
-    } else {
-      arrowRight.style.opacity = '5%'
-    }
-    return card_index
-  });
+})
 
-  arrowLeft.addEventListener('click', () => {
-    console.log(card_index)
-    if(card_index == 0) {
-      arrowLeft.style.opacity = '5%'
-    } else {
-      offers[card_index].style.display = 'none'
-      offers[card_index-1].style.display = 'flex'
-      arrowRight.style.opacity = '100%'
-      card_index--;
-    }
-  });
-  
-}
+btnLeft.addEventListener('click', () => {
+  card_index -= 1
+  console.log(card_index)
+})
+
+
+    
+
 
 
 

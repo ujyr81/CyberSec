@@ -78,6 +78,7 @@
 
   .offer {
     padding: 0;
+    &__arrow {display: none;}
     &__para {width: 50%;}
   }
 
@@ -168,6 +169,8 @@
 
   .offer {
     height: 70rem;
+
+    &__arrow { display: none;}
 
     &__card {
       height: 30rem;
@@ -304,11 +307,9 @@
 
   .offer {
     padding: 3rem 0;
-
+    &__arrow {display: block;}
     &__area {
-      &--area-adv, &--area-pro {
-      display: none;
-      }
+      &--area-adv, &--area-pro {display: none;}
     }
   }
   

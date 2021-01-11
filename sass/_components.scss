@@ -29,6 +29,16 @@
     height: 5rem;
   }
 
+  &--arrow {
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    font-weight: lighter;
+    background: none;
+    border: none;
+    color: $color-secondary;
+  }
+
   &__bars {
     height: 100%;
     display: flex;

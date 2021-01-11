@@ -168,6 +168,8 @@
     align-items: center;
   }
 
+  &__arrow { display: none;}
+
   &__area {
     height: 100%;
     display: flex;

@@ -59,6 +59,15 @@ $color-orange-dark: #b47500; */
     border-radius: 50%;
     width: 5rem;
     height: 5rem; }
+  .btn--arrow,
+  .btn--secondary--arrow {
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    font-weight: lighter;
+    background: none;
+    border: none;
+    color: #e4e1dd; }
   .btn__bars,
   .btn--secondary__bars {
     height: 100%;
@@ -236,6 +245,8 @@ $color-orange-dark: #b47500; */
     flex-direction: row;
     justify-content: space-around;
     align-items: center; }
+  .offer__arrow {
+    display: none; }
   .offer__area {
     height: 100%;
     display: flex;
@@ -506,6 +517,8 @@ $color-orange-dark: #b47500; */
       order: 4; }
   .offer {
     padding: 0; }
+    .offer__arrow {
+      display: none; }
     .offer__para {
       width: 50%; }
   .testimonials {
@@ -562,6 +575,8 @@ $color-orange-dark: #b47500; */
     justify-self: center; }
   .offer {
     height: 70rem; }
+    .offer__arrow {
+      display: none; }
     .offer__card {
       height: 30rem;
       width: 18rem; }
@@ -662,6 +677,8 @@ $color-orange-dark: #b47500; */
       margin-bottom: 1rem; }
   .offer {
     padding: 3rem 0; }
+    .offer__arrow {
+      display: block; }
     .offer__area--area-adv, .offer__area--area-pro {
       display: none; }
   .testimonials {
