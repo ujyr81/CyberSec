@@ -7,11 +7,13 @@ const navList = document.querySelector('.header__list');
 const btnChat = document.querySelector('.header__btn--chat');
 const header = document.querySelector('.header');
 
+
 btnMenu.addEventListener('click', () => {
-  navMenu.classList.toggle('header__menu--mobile');
-  navList.classList.toggle('header__list--mobile');
-  btnChat.classList.toggle('header__btn--mobile');
-  
+  navMenu.classList.toggle('header__menu--mobile-show');
+  navList.classList.toggle('header__list--mobile-show');
+  btnChat.classList.toggle('header__btn--mobile-show');
+  btnMenu.classList.toggle('header__btn--close');
+
   if(!navList.contains(btnChat)) {
     navList.appendChild(btnChat);
   } else {
@@ -51,25 +53,59 @@ const offers = []
 offers[0] = document.querySelector('.offer__area--area-bas');
 offers[1] = document.querySelector('.offer__area--area-adv');
 offers[2] = document.querySelector('.offer__area--area-pro');
-
-
 const btnLeft = document.querySelector('.offer__arrow--left');
 const btnRight = document.querySelector('.offer__arrow--right');
-
-// offers[card_index].style.display = 'none'
-// offers[card_index+1].style.display = 'flex'
 
 let card_index = 0;
 
 btnRight.addEventListener('click', () => {
-  card_index += 1
-  console.log(card_index)
+  if(card_index < offers.length - 1) {
+    card_index += 1
+    showArrows()
+    showNextCard()
+  }
 })
 
 btnLeft.addEventListener('click', () => {
-  card_index -= 1
-  console.log(card_index)
+  if(card_index > 0) {
+    card_index -= 1
+    showArrows()
+    showPrevCard()
+  }
 })
+
+function showArrows() {
+  if(card_index == 0) {
+    btnLeft.style.visibility = 'hidden'
+  } else {
+    btnLeft.style.visibility = 'visible'
+  }
+
+  if(card_index < offers.length - 1) {
+    btnRight.style.visibility = 'visible'
+  } else {
+    btnRight.style.visibility = 'hidden'
+  }
+}
+
+function showNextCard() {
+  if(card_index < offers.length) {
+    offers[card_index-1].style.display = 'none'
+    offers[card_index].style.display = 'flex'
+  } 
+}
+
+function showPrevCard() {
+  if(card_index >= 0 ) {
+    offers[card_index+1].style.display = 'none'
+    offers[card_index].style.display = 'flex'
+  } 
+}
+
+showArrows()
+
+
+
 
 
     
