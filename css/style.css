@@ -300,7 +300,7 @@ $color-orange-dark: #b47500; */
       top: -1rem;
       left: -.9rem;
       width: 1.1rem;
-      height: 39%;
+      height: 41%;
       background: #2b2929;
       border-bottom: 21.6rem solid #b7afa4;
       transform-origin: left;
@@ -326,10 +326,10 @@ $color-orange-dark: #b47500; */
     .offer__btn :after {
       content: '';
       position: absolute;
-      top: -2.3rem;
-      left: -6.1rem;
+      top: -2.4rem;
+      left: -6rem;
       width: 1rem;
-      height: 4.7rem;
+      height: 4.8rem;
       background: #e89600;
       transform-origin: left;
       transform: skewY(44deg); }
