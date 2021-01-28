@@ -213,11 +213,9 @@
       margin: 0;
     }
 
-    &__menu, &__btn--chat {
-      display: none;
-    }
+    &__menu, &__btn--chat {display: none;}
 
-    &__menu--mobile {
+    &__menu--mobile-show {
       width: 100%;
       height: 100%;
       margin-top: 0;
@@ -226,37 +224,37 @@
       z-index: 10;
       display: flex;
       flex-direction: column;
-      background: rgba(0, 0, 0, 0.95);
-      position: relative;
-      animation: example .5s;
-      
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 5rem;
-        top: -5rem;
-        left: 0;
-        background: black;
-      }
+      // background: rgba(0, 0, 0, 0.95);
     }
 
-    &__list--mobile {
+    &__overlay-show {
+      width: 100%;
+      height: 100vh;
+      margin-top: 0;
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      position: absolute;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.95);
+      animation: scaleOverlay .5s ease-in-out both;
+      overflow-y: hidden;
+    }
+
+    &__list--mobile-show {
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      
+      animation: fadeIn 1s ease-in-out ;
 
       & > * > * {
         font-size: $font-md;
         line-height: 175%;
-        animation: example 5s;
       }
     }
 
-    &__btn--mobile {
+    &__btn--mobile-chat {
       display: block;
       grid-column: 1/-1;
       grid-row: 8/9;
@@ -264,7 +262,6 @@
 
       align-self: center;
       justify-self: center;
-      animation: example 5s;
     }
 
     &__btn--menu {
@@ -278,6 +275,14 @@
       justify-self: center;
       align-self: center;
       z-index: 20;
+    }
+
+    &__btn--close {
+      & :first-child {
+        & :nth-child(1) {transform: rotate(45deg) translate(.5rem, .5rem);}
+        & :nth-child(2) {opacity: 0;}
+        & :nth-child(3) {transform: rotate(-45deg) translate(.7rem,-.6rem);}
+      }
     }
 
     &__heading {
@@ -309,8 +314,16 @@
     padding: 3rem 0;
     &__arrow {display: block;}
     &__area {
+      animation: fadeIn 1s ease-in-out;
       &--area-adv, &--area-pro {display: none;}
     }
+
+    &__btn {
+      width: 18rem;
+
+      & :after {left: -4rem;}
+    }
+
   }
   
   .testimonials {
@@ -482,9 +495,4 @@
   .offer__para {width: 90%;}
   .testimonials {height: 80rem;}
   .footer__copy {margin-right: 0;}
-}
-
-@keyframes example {
-  from {opacity: 0%;}
-  to {opacity: 100%;}
 }

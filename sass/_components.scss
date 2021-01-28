@@ -2,7 +2,8 @@
 
 /* buttons styles */
 .btn,
-.btn--secondary {
+.btn--secondary,
+.btn--mobile {
   font-family: 'Varela Round', sans-serif;
   display: flex;
   align-items: center;
@@ -14,13 +15,14 @@
   text-transform: capitalize;
   border: none;
   color: $color-secondary;
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease;
   background-color: $color-tertiary;
   text-shadow: 1px 1px $color-secondary-dark;
 
-  &--secondary {
+  &--secondary, &--mobile {
     background-color: $color-primary-light;
     padding: 0 1.5rem;
+    position: relative;
   }
 
   &--menu {
@@ -76,26 +78,6 @@
     color: $color-tertiary-dark;
     font-size: $font-xs;
     text-decoration: underline;
-  }
-
-  &--menu {
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-  }
-
-  &__bars {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 1rem 0;
-  }
-
-  &__bar {
-    width: 100%;
-    height: 2px;
-    background-color: $color-secondary;
   }
 
   &:hover {

@@ -2,6 +2,7 @@
 Consider adding a folder for your components for example, and breaking it up into 
 individual files such as _button.scss & _carousel.scss. */
 
+@import 'animations';
 @import 'base';
 @import 'components';
 @import 'layout';

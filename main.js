@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////////////////////////
 const btnMenu = document.querySelector('.header__btn--menu');
 const navMenu = document.querySelector('.header__menu');
+const navOverlay = document.querySelector('.header__overlay');
 const navList = document.querySelector('.header__list');
 const btnChat = document.querySelector('.header__btn--chat');
 const header = document.querySelector('.header');
@@ -11,7 +12,8 @@ const header = document.querySelector('.header');
 btnMenu.addEventListener('click', () => {
   navMenu.classList.toggle('header__menu--mobile-show');
   navList.classList.toggle('header__list--mobile-show');
-  btnChat.classList.toggle('header__btn--mobile-show');
+  navOverlay.classList.toggle('header__overlay-show');
+  btnChat.classList.toggle('header__btn--mobile-chat');
   btnMenu.classList.toggle('header__btn--close');
 
   if(!navList.contains(btnChat)) {
@@ -41,7 +43,7 @@ function changeCard() {
     i = 0;
     cards[i].style.display = "flex";
   }
-  setTimeout("changeCard()", 5000);         
+  setTimeout("changeCard()", 6000);         
 }
 window.onload = changeCard;                   
 
@@ -90,14 +92,14 @@ function showArrows() {
 
 function showNextCard() {
   if(card_index < offers.length) {
-    offers[card_index-1].style.display = 'none'
+    offers[card_index - 1].style.display = 'none'
     offers[card_index].style.display = 'flex'
   } 
 }
 
 function showPrevCard() {
   if(card_index >= 0 ) {
-    offers[card_index+1].style.display = 'none'
+    offers[card_index + 1].style.display = 'none'
     offers[card_index].style.display = 'flex'
   } 
 }
